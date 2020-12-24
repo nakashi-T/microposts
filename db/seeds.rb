@@ -5,7 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create(name: 'siruko1', email: 'siruko@docomo.ne.jp_1', password: 'sirusiru_1')
-User.create(name: 'siruko2', email: 'siruko@docomo.ne.jp_2', password: 'sirusiru_2')
-User.create(name: 'siruko3', email: 'siruko@docomo.ne.jp_3', password: 'sirusiru_3')
+
+# ユーザ作成
+(1..50).each do |number|
+User.create(name: 'siruko' + number.to_s, email: 'siruko' + number.to_s + '@docomo.ne.jp', password: 'sirusiru' + number.to_s)
+end
 # 上記はうまく動かなった
+
+# 特定のユーザのコメント作成
+# (1..25).each do |number|
+#   user = User.third
+#   micropost = user.microposts.build(content: 'ナイスー！テストー！'+ number.to_s)
+#   micropost.save
+# end
