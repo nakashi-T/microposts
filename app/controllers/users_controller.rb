@@ -40,8 +40,7 @@ class UsersController < ApplicationController
     counts(@user)
   end
   
-  def likes
-    
+  def like
   end
   
   private
